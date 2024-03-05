@@ -1,7 +1,7 @@
 const express = require("express");
- require("./db/connection");
-const SongsApi = require("./models/songs");
-const router = require("./routers/server")
+ require("./src/db/connection");
+const SongsApi = require("./src/models/songs");
+const router = require("./src/routers/server")
 
 const app = express();
 app.use(express.json());
@@ -24,7 +24,7 @@ app.get("/song",async (req,res)=>{
       const getsongs = await SongsApi.find({});
         res.send(getsongs);
     }catch(e){
-        res.status(400).send(e);
+        res.status(400).send(e);  
     }
 })
 
