@@ -1,7 +1,6 @@
 
 const express = require("express");
 const mongoose = require("mongoose");
-
 const router = new express.Router
 
 /// Defining  schemas ////
@@ -18,8 +17,8 @@ const songSchema = new mongoose.Schema({
 
 /// Create Mongoose Models /// 
 
-const SongsApi = new mongoose.model('SongApi', songSchema);
-module.exports = SongsApi
+const CSong = new mongoose.model('SongApi', songSchema);
+module.exports = CSong
 
 ///  Route for user registration ///
 

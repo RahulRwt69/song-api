@@ -5,7 +5,9 @@ const router = require("./src/routers/server")
 
 const app = express();
 app.use(express.json());
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 6000;
+const DBHOST=`mongodb+srv://rahulrawat4995:Sandeep%402257@songcluster.zygegdl.mongodb.net/CSong`
+app.get("/")
 
 app.post("/song",async (req,res)=>{
     try{
@@ -17,7 +19,7 @@ app.post("/song",async (req,res)=>{
         res.status(400).send(e);
     }
 })
-
+ 
 
 app.get("/song",async (req,res)=>{
     try{
