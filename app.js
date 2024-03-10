@@ -6,10 +6,10 @@ const router = require("./src/routers/server")
 const app = express();
 app.use(express.json());
 const PORT = process.env.PORT || 6000;
-const DBHOST=`mongodb+srv://rahulrawat4995:Sandeep%402257@songcluster.zygegdl.mongodb.net/CSong`
+
 app.get("/")
 
-app.post("/song",async (req,res)=>{
+app.post("/addsong",async (req,res)=>{
     try{
       const addingSongsApiRecords = new SongsApi(req.body)
       console.log(req.body);
@@ -21,7 +21,7 @@ app.post("/song",async (req,res)=>{
 })
  
 
-app.get("/song",async (req,res)=>{
+app.get("/getsongs",async (req,res)=>{
     try{
       const getsongs = await SongsApi.find({});
         res.send(getsongs);
