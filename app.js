@@ -19,7 +19,7 @@ app.post("/addsong",async (req,res)=>{
         res.status(400).send(e);
     }
 })
- 
+  
 
 app.get("/getsongs",async (req,res)=>{
     try{
@@ -28,8 +28,9 @@ app.get("/getsongs",async (req,res)=>{
     }catch(e){
         res.status(400).send(e);  
     }
-})
+}) 
 
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
+ 
