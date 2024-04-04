@@ -13,6 +13,7 @@ const songSchema = new mongoose.Schema({
     songLink: { type: String, required: true },
     imageUrl: { type: String, required: true },
     artist: { type: String, required: true },
+    genre:{type: String, required:true}
 });
 
 /// Create Mongoose Models /// 
